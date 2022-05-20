@@ -1,0 +1,8 @@
+@import "src/assets/styles/colors.scss";
+
+:host {
+  .header {
+    height: 152px;
+    background: linear-gradient(88.96deg, $color-primary 4.35%, $color-primary-light 96.43%);
+  }
+}

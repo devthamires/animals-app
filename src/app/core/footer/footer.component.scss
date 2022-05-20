@@ -1,0 +1,48 @@
+@import "src/assets/styles/colors.scss";
+@import "src/assets/fonts/fonts.scss";
+
+:host {
+  .footer {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color-secondary;
+
+    .menu {
+      display: flex;
+      text-align: center;
+      justify-content: space-evenly;
+      font-family: Nunito-Bold;
+      width: 100%;
+      color: $color-white;
+      font-size: 21px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+
+      a {
+        font-size: 16px;
+        font-family: Nunito-SemiBold;
+        color: $color-gray;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .menu {
+        flex-direction: column;
+      }
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+
+      img {
+        height: 25px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
