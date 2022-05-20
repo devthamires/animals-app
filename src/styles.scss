@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/colors.scss";
+@import "assets/fonts/fonts.scss";
+
+body {
+  margin: 0;
+  text-align: left;
+  height: 100%;
+  scroll-behavior: smooth;
+  background-color: $color-base;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+}
