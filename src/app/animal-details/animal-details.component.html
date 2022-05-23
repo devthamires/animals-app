@@ -1,1 +1,7 @@
-<p>animal-details works!</p>
+<section>
+  <div class="card-container" *ngIf="animal$ | async as animal">
+    <img [src]="animal.avatar" alt="" />
+    <p class="title">{{ animal.name }}</p>
+    <p class="subtitle">{{ animal.type }}</p>
+  </div>
+</section>

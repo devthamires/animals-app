@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AnimalDetailsComponent } from './animal-details/animal-details.component';
 import { AnimalsListComponent } from './animals-list/animals-list.component';
-import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {

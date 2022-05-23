@@ -1,8 +1,28 @@
 @import "src/assets/styles/colors.scss";
 
-:host {
-  .header {
-    height: 152px;
-    background: linear-gradient(88.96deg, $color-primary 4.35%, $color-primary-light 96.43%);
+.header {
+  height: 80px;
+  background: linear-gradient(
+    88.96deg,
+    $color-primary 4.35%,
+    $color-primary-light 96.43%
+  );
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+
+  a {
+    color: $color-white;
+    opacity: 0.8;
+    font-family: Nunito-SemiBold;
+    font-size: 1.2em;
+
+    &.active {
+      color: $color-white;
+      opacity: 1;
+    }
   }
 }

@@ -1,5 +1,14 @@
-<div *ngFor="let animal of animals$ | async">
-  <p>{{ animal.name }}</p>
-</div>
-
-<app-button text="Update"></app-button>
+<section>
+  <div class="card-container">
+    <app-card
+      *ngFor="let animal of animals$ | async"
+      [title]="animal.name"
+      [subtitle]="animal.type"
+      [img]="animal.avatar"
+      (onClick)="goToAnimal(animal)"
+    ></app-card>
+  </div>
+  <div class="button-container">
+    <app-button text="Update" (click)="getAnimalsList()"></app-button>
+  </div>
+</section>

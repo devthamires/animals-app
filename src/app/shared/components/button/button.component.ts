@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 type TButton = 'submit' | 'button';
 
@@ -10,10 +10,4 @@ type TButton = 'submit' | 'button';
 export class ButtonComponent {
   @Input() type: TButton = 'submit';
   @Input() text: string;
-
-  @Output() onClick = new EventEmitter();
-
-  click() {
-    this.onClick.emit();
-  }
 }

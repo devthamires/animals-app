@@ -1,0 +1,40 @@
+@import "src/assets/styles/colors.scss";
+
+.card-container {
+  width: 500px;
+  height: 400px;
+  border-radius: 16px;
+  background-color: $color-white;
+  -webkit-box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.14);
+  font-family: OpenSans;
+  cursor: pointer;
+
+  .title {
+    margin: 24px;
+    color: $color-title;
+    font-size: 1.14em;
+  }
+
+  .subtitle {
+    margin: 24px;
+    color: $color-subtitle;
+    font-size: 1em;
+    font-family: OpenSans;
+    text-transform: capitalize;
+  }
+
+  img {
+    height: 216px;
+    width: 100%;
+    object-fit: fill;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .card-container {
+    width: 100%;
+  }
+}
