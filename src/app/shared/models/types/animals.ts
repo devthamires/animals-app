@@ -6,5 +6,5 @@ export type TAnimal = {
   type: string;
   avatar: string;
   name: string;
-  id: number;
+  id: string;
 };

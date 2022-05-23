@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 import { TAnimal } from '../shared/models/types/animals';
 import { AnimalsServices } from '../shared/services/animals/animals.service';
 
@@ -9,11 +9,17 @@ import { AnimalsServices } from '../shared/services/animals/animals.service';
   styleUrls: ['./animal-details.component.scss'],
 })
 export class AnimalDetailsComponent implements OnInit {
-  animal$!: Observable<TAnimal | undefined>;
-
-  constructor(private animalService: AnimalsServices) {}
+  animal!: TAnimal;
+  constructor(
+    private animalService: AnimalsServices,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    console.log('AQUI');
+    if (this.animalService.animals) {
+      this.animal = this.animalService.getAnimalById(
+        this.route.snapshot.params['id']
+      );
+    }
   }
 }
